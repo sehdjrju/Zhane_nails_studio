@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zhané Nails | Studio & Academy</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Inter,sans-serif;
+}
+
+body{
+  background:#0b0b10;
+  color:#fff;
+  overflow-x:hidden;
+}
+
+/* HERO VIDEO */
+.hero{
+  height:100vh;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  overflow:hidden;
+}
+
+.hero video{
+  position:absolute;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:brightness(0.55);
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  animation:fade 1.2s ease forwards;
+  opacity:0;
+  transform:translateY(30px);
+}
+
+@keyframes fade{
+  to{opacity:1;transform:translateY(0);}
+}
+
+h1{
+  font-size:64px;
+  letter-spacing:-1px;
+}
+
+p{
+  opacity:0.8;
+  margin-top:10px;
+}
+
+/* BUTTONS */
+.btn{
+  display:inline-block;
+  margin:15px 8px;
+  padding:12px 24px;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:500;
+  transition:0.3s;
+}
+
+.btn-white{
+  background:#fff;
+  color:#000;
+}
+
+.btn-outline{
+  border:1px solid rgba(255,255,255,0.4);
+  color:#fff;
+}
+
+.btn-white:hover,
+.btn-outline:hover{
+  transform:scale(1.05);
+}
+
+/* SECTIONS */
+section{
+  padding:120px 20px;
+  max-width:1000px;
+  margin:auto;
+  text-align:center;
+}
+
+/* REVEAL */
+.hidden{
+  opacity:0;
+  transform:translateY(60px);
+  transition:1s ease;
+}
+
+.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:15px;
+  margin-top:30px;
+}
+
+.card{
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.08);
+  padding:30px;
+  border-radius:18px;
+  transition:0.4s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  background:rgba(255,255,255,0.08);
+}
+
+/* GALLERY */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:15px;
+  margin-top:30px;
+}
+
+.gallery img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  border-radius:18px;
+  transition:0.4s;
+}
+
+.gallery img:hover{
+  transform:scale(1.04);
+}
+
+/* MAP */
+.map{
+  margin-top:30px;
+  border-radius:18px;
+  overflow:hidden;
+}
+
+/* FLOAT BUTTON */
+.fixed{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25d366;
+  padding:14px 18px;
+  border-radius:50px;
+  font-weight:600;
+  color:#fff;
+  text-decoration:none;
+  box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* FOOTER */
+footer{
+  padding:40px;
+  text-align:center;
+  opacity:0.6;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- HERO VIDEO -->
+<div class="hero">
+  <video autoplay muted loop playsinline>
+    <source src="https://cdn.coverr.co/videos/coverr-nail-art-7585/1080p.mp4">
+  </video>
+
+  <div class="hero-content">
+    <h1>Zhané Nails</h1>
+    <p>Luxury Studio & Academy</p>
+
+    <a class="btn btn-white" href="https://instagram.com/zhane_nails_studio" target="_blank">Instagram</a>
+    <a class="btn btn-outline" href="#services">Услуги</a>
+  </div>
+</div>
+
+<section class="hidden">
+  <h2>О студии</h2>
+  <p>Премиальный nail-сервис и обучение мастеров. Эстетика, стерильность и качество уровня бренда.</p>
+</section>
+
+<section id="services" class="hidden">
+  <h2>Услуги</h2>
+
+  <div class="grid">
+    <div class="card">Маникюр</div>
+    <div class="card">Педикюр</div>
+    <div class="card">Дизайн</div>
+    <div class="card">Обучение</div>
+  </div>
+</section>
+
+<section class="hidden">
+  <h2>Работы</h2>
+
+  <div class="gallery">
+    <img src="images/work1.jpg">
+    <img src="images/work2.jpg">
+    <img src="images/work3.jpg">
+    <img src="images/work4.jpg">
+  </div>
+</section>
+
+<section class="hidden">
+  <h2>Контакты</h2>
+
+  <p>📍 улица Кабанбай батыра, 128, Усть-Каменогорск</p>
+  <p>🕒 10:00 - 19:00 (ежедневно)</p>
+
+  <p>
+    📷 Instagram:<br>
+    <a href="https://instagram.com/zhane_nails_studio">@zhane_nails_studio</a><br>
+    <a href="https://instagram.com/zhane_nails">@zhane_nails</a>
+  </p>
+
+  <p>
+    💬 WhatsApp:<br>
+    <a href="https://wa.me/77012345678">Написать</a>
+  </p>
+
+  <div class="map">
+    <iframe 
+      src="https://www.google.com/maps?q=улица%20Кабанбай%20батыра%20128%20Усть-Каменогорск&output=embed"
+      width="100%" height="300" style="border:0;">
+    </iframe>
+  </div>
+</section>
+
+<a class="fixed" href="https://wa.me/77710517803">Записаться</a>
+
+<footer>
+  © Zhané Nails Studio & Academy
+</footer>
+
+<script>
+// scroll reveal
+const obs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add("show");
+    }
+  });
+});
+
+document.querySelectorAll(".hidden").forEach(el=>{
+  obs.observe(el);
+});
+</script>
+
+</body>
+</html>
